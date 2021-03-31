@@ -1,0 +1,20 @@
+/*
+    Theme Name: NavyBlue
+*/
+.post-title{
+    text-decoration:none;
+
+    color:black;
+}
+.widget{
+    list-style-type:none;
+}
+.bg-navy-transparent{
+    background: rgba(0,0,128,0.7);
+}
+.bg-navy{
+    background:navy !important;
+}
+body{
+    background: linear-gradient(190deg, black,navy);
+}
