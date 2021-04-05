@@ -38,8 +38,8 @@
         wp_register_style('style', get_template_directory_uri().'/style.css', array(), null);
 
         wp_enqueue_style(array(
-            'bootstrap-css',
-            'style-css'
+            'bootstrap',
+            'style'
         ));
     }
     add_action('init', 'NavyBlue_Assets');
