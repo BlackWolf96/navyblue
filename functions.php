@@ -21,25 +21,28 @@
         add_action('after_setup_theme','NavyBlue_Setup');
     endif;
 
-    // Register Style
-    function NavyBlue_Style(){
-        wp_register_style('bootstrap', get_template_directory_uri().'/css/bootstrap.css', array(), null);
-        wp_register_style('style', get_template_directory_uri().'/style.css', array(), null);
-        wp_enqueue_style('bootstrap');
-        wp_enqueue_style('style');
-    }
-    add_action('wp_enqueue_scripts', 'NavyBlue_Style');
-
-    // Register Scripts to footer 1. JQuery, 2. Popper, 3. Bootstrap
-    function NavyBlue_Scripts(){
+    function NavyBlue_Assets(){
+        // Register script
         wp_register_script('jquery-3.5.1.min.js', get_template_directory_uri().'/js/jquery-3.5.1.min.js', array(), null, true);
         wp_register_script('popper-js', get_template_directory_uri().'/js/popper.js', array(), null, true);
         wp_register_script('bootstrap-js', get_template_directory_uri().'/js/bootstrap.js', array(), null, true);
-        wp_enqueue_script('jquery-3.5.1.min.js');
-        wp_enqueue_script('popper-js');
-        wp_enqueue_script('bootstrap-js');
+
+        wp_enqueue_script(array(
+            'jqery-3.5.1.min.js',
+            'popper-js',
+            'bootstrap.js'
+        ));
+
+        // Register style
+        wp_register_style('bootstrap', get_template_directory_uri().'/css/bootstrap.css', array(), null);
+        wp_register_style('style', get_template_directory_uri().'/style.css', array(), null);
+
+        wp_enqueue_style(array(
+            'bootstrap-css',
+            'style-css'
+        ));
     }
-    add_action('wp_enqueue_scripts', 'NavyBlue_Scripts');
+    add_action('init', 'NavyBlue_Assets');
 
     // Remove Generator
     function Remove_Generator(){
