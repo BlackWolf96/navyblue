@@ -47,10 +47,10 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active"> 
-            <img style="width:100%;" src="<?php echo get_template_directory_uri().'/images/x_slider.png';?>" alt="Complete here" /> 
+            <img style="width:100%;" src="<?php echo get_template_directory_uri().'/images/x-slider.png';?>" alt="Complete here" /> 
         </div>
         <div class="carousel-item">
-            <img style="width:100%;"src="<?php echo get_template_directory_uri().'/images/x_slider.png';?>" alt="Complete here" />
+            <img style="width:100%;"src="<?php echo get_template_directory_uri().'/images/x-slider.png';?>" alt="Complete here" />
         </div>
     </div>
 </div>
